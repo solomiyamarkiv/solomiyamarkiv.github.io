@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<meta name="theme-color" content="#1E1E1E" />
+	<meta name="msapplication-navbutton-color" content="#1E1E1E" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="#1E1E1E" />
+
+	<title>Solomiya Markiv</title>
+
+	<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+
+	<link rel="stylesheet" href="src/css/main.css">
+</head>
+<body>
+	<div class="main-photo">
+		<div class="photo-content">
+			<h1 class="main-name">Solomiya</h1>
+			<div class="btn-scroll">View</div>
+		</div>
+	</div>
+
+	<div class="hideWhileLoading">
+		<div class="line line-top"></div>
+		<div class="photos-container"></div>
+		<div class="line line-bottom"></div>
+
+		<div class="btn-more">More</div>
+
+		<footer>
+			Copyrigh &copy; 2018-2019   <a href="https://bohdan-krupa.github.io" target="_blank">Created by Bohdan Krupa</a>
+		</footer>
+	</div>
+
+	<div class="preloader-container">
+		<div class="preloader-wrapper small active">
+			<div class="spinner-layer">
+				<div class="circle-clipper left">
+					<div class="circle"></div>
+				</div><div class="gap-patch">
+					<div class="circle"></div>
+				</div><div class="circle-clipper right">
+					<div class="circle"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/5.8.3/firebase.js"></script>
+	<script>
+		var config = {
+			apiKey: "AIzaSyBTG3H68vMSe8BxTV_c03CcpeyBhDYk5Fg",
+			authDomain: "gallery-000.firebaseapp.com",
+			databaseURL: "https://gallery-000.firebaseio.com",
+			projectId: "gallery-000",
+			storageBucket: "gallery-000.appspot.com",
+			messagingSenderId: "826246038673"
+		};
+		firebase.initializeApp(config);
+	</script>
+	<script src="src/js/getAndRenderPhotos.js"></script>
+	<script src="src/js/script.js"></script>
+	<script src="src/js/smoothScroll.js"></script>
+</body>
+</html>

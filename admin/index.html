@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<meta name="theme-color" content="#1E1E1E" />
+	<meta name="msapplication-navbutton-color" content="#1E1E1E" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="#1E1E1E" />
+
+	<title>Admin</title>
+
+	<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+
+	<link rel="stylesheet" href="../src/css/admin.css">
+</head>
+<body>
+	<div class="container">
+		<div class="btn-sign-out waves-effect waves-light btn">Sign out</div>
+
+		<div class="file-field input-field">
+			<div class="btn">
+				<span>File</span>
+				<input type="file">
+			</div>
+			<div class="file-path-wrapper">
+				<input class="file-path validate" type="text" />
+			</div>
+		</div>
+
+		<div class="length-priority">
+			<p>Length priority:</p>
+			<label>
+				<input class="with-gap" name="group-1" type="radio" checked />
+				<span>Random</span>
+			</label>
+			<label>
+				<input class="with-gap" name="group-1" type="radio" />
+				<span>Custom</span>
+			</label>
+			<p class="range-field">
+				<input type="range" min="1" max="2" step="0.1" disabled />
+			</p>
+		</div>
+		
+		<div class="btn-send btn-floating btn-large waves-effect waves-light">+</div>
+
+		<div class="photos-container"></div>
+	</div>
+
+	<div class="auth">
+		<div class="input-field">
+			<input id="email" type="email" class="validate" />
+			<label for="email">Email</label>
+		</div>
+
+		<div class="input-field">
+          <input id="password" type="password" class="validate" />
+          <label for="password">Password</label>
+        </div>
+
+        <div class="btn-sign-in waves-effect waves-light btn-large">Sign in</div>
+	</div>
+
+	<div class="downloading">
+		<p>Downloading</p>
+	</div>
+
+
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/5.8.3/firebase.js"></script>
+	<script>
+		var config = {
+			apiKey: "AIzaSyBTG3H68vMSe8BxTV_c03CcpeyBhDYk5Fg",
+			authDomain: "gallery-000.firebaseapp.com",
+			databaseURL: "https://gallery-000.firebaseio.com",
+			projectId: "gallery-000",
+			storageBucket: "gallery-000.appspot.com",
+			messagingSenderId: "826246038673"
+		};
+		firebase.initializeApp(config);
+	</script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+	<script src="../src/js/getAndRenderPhotos.js"></script>
+	<script src="../src/js/admin.js"></script>
+	<script src="../src/js/account.js"></script>
+	<script src="../src/js/smoothScroll.js"></script>
+</body>
+</html>
